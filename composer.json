@@ -1,0 +1,24 @@
+{
+  "name": "ambiene/agent",
+  "description": "Laravel package to parse agents",
+  "type": "library",
+  "require": {
+    "mobiledetect/mobiledetectlib": "4.8.x",
+    "jaybizzle/crawler-detect": "1.2.x"
+  },
+  "license": "mit",
+  "autoload": {
+    "psr-4": {
+      "Ambiene\\Agent\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": ["Ambiene\\Agent\\ServiceProvider"],
+      "aliases": {
+        "Agent": "Ambiene\\Agent\\Facades\\Agent"
+      }
+    }
+  },
+  "minimum-stability": "dev"
+}
