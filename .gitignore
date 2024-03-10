@@ -1,3 +1,5 @@
+composer.lock
+
 ### Laravel ###
 /vendor/
 node_modules/
