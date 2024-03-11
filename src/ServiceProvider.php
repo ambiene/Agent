@@ -6,18 +6,13 @@ use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider
 {
-    public function boot()
+    /**
+     * @return void
+     */
+    public function register(): void
     {
-        $this->publishes(
-            [
-                __DIR__ . "/../config/agent.php" => config_path("agent.php"),
-            ],
-            "config"
-        );
-    }
-
-    public function register()
-    {
-        $this->app->singleton("agent", concrete: fn($app) => new Agent());
+        $this->app->bind('agent', function () {
+            return new Agent();
+        });
     }
 }
