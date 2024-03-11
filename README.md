@@ -30,13 +30,13 @@ $isDesktop = $agent->isDesktop();
 ### Detecting Operating System
 
 ```php
-$os = $agent->operatingSystem();
+$os = $agent->os();
 ```
 
 ## Checking for Crawlers
 
 ```php
-$isRobot = $agent->isRobot();
+$crawler = $agent->isCrawler();
 ```
 
 ## Browser Detection
